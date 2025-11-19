@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shop beautiful, high-quality wigs at Glamified Hair & Beauty. Choose from curly, straight, or bob wigs — perfect for every occasion.">
+  <meta name="keywords" content="wigs, shop wigs online, curly wigs, straight wigs, bob wigs, Glamified Hair, affordable wigs, beauty store, human hair wigs">
+  <title>Glamified Hair & Beauty - Shop</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- load script with defer so DOM exists before it runs -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header>
+    <h1>Glamified Hair & Beauty</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About Us</a>
+      <a href="wig-care.html">Wig Care</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Find Your Perfect Look</h2>
+    <p>Shop beautiful, high-quality wigs for every occasion.</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </section>
+
+  <!-- Products -->
+  <section id="shop" class="products">
+    <h2>Wigs</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="images/wig1.jpg" alt="Kinky Curly wig">
+        <h3>Kinky Curly</h3>
+        <p>R1400</p>
+        <button onclick="addToCart('Kinky Curly', 1400)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/display wig3.webp" alt="Burgundy Bob wig">
+        <h3>Burgundy Bob</h3>
+        <p>R1380</p>
+        <button onclick="addToCart('Burgundy Bob', 1380)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/wig2.jpg" alt="Curly wig">
+        <h3>Curly Wig</h3>
+        <p>R1350</p>
+        <button onclick="addToCart('Curly Wig', 1350)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/wig3.jpg" alt="Bob wig">
+        <h3>Bob Wig</h3>
+        <p>R850</p>
+        <button onclick="addToCart('Bob Wig', 850)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart -->
+  <section class="cart">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <p><strong>Total:</strong> R<span id="cart-total">0</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button id="checkout-btn">Checkout</button>
+  </section>
+
+  <!-- Checkout -->
+  <section class="checkout">
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Shipping Address</label>
+        <textarea id="address" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="payment">Payment</label>
+        <select id="payment" required>
+          <option value="">Select</option>
+          <option value="card">Credit/Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="eft">EFT / Bank Transfer</option>
+        </select>
+      </div>
+
+      <p><strong>Total Amount:</strong> R<span id="checkout-total">0</span></p>
+      <button type="submit" class="btn">Complete Purchase</button>
+    </form>
+  </section>
+
+  <!-- Lightbox popup -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <span class="close" onclick="closeLightbox()" title="Close">&times;</span>
+    <span class="prev" onclick="changeImage(-1)" title="Previous">&#10094;</span>
+    <img id="lightbox-img" alt="Expanded product image">
+    <span class="next" onclick="changeImage(1)" title="Next">&#10095;</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Glamified Hair & Beauty. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

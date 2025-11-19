@@ -58,3 +58,4 @@ Planned features that can be added later:
 •	Client testimonials section
 •	Newsletter signup form
 •	Admin panel for updating products
+Bontle Markus 2025 – All Rights Reserved
